@@ -23,7 +23,6 @@ const AddNotes = ({addNotes}) => {
     }
     const addColorFun = (color) => {
         setColorPicker(color)
-        console.log(color);
     }
     const myStyle ={
         backgroundColor:`#${colorPicker}`

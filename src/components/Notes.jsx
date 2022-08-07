@@ -7,7 +7,7 @@ const Notes = ({getInitialData, onDelete, onArchive}) => {
             <div className="note-items">   
             {notesData.length >0 
                 ? notesData.map(item => 
-                    <NoteItem title ={item.title}
+                    <NoteItem key={item.id} title ={item.title}
                     body={item.body}
                     id={item.id}
                     color={item.color} 
