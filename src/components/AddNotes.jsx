@@ -2,8 +2,8 @@ import NoteColor from './button/NoteColor.jsx';
 import Archive from './button/Archive.jsx';
 import {useState} from 'react';
 const AddNotes = ({addNotes}) => {
-    const [addTitle, setAddTitle] = useState();
-    const [addBody, setAddbody] = useState();
+    const [addTitle, setAddTitle] = useState('');
+    const [addBody, setAddbody] = useState('');
     const [charLimit, setCharLimit] = useState(0);
     const [colorPicker, setColorPicker] = useState('f77f00');
     const addTitleFun = (e) => {
@@ -32,7 +32,7 @@ const AddNotes = ({addNotes}) => {
             id: +new Date(),
             title: addTitle,
             body: addBody,
-            createdAt: new Date(),
+            createdAt: Date(),
             color: colorPicker,
             archived: false,
         }
