@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500;700&display=swap');
+:root {
+    --border-gray: 2px rgb(97, 94, 94) solid;
+    --border-black: 2px solid black;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Mono', monospace;
+}
+.search-notes input, .add-notes textarea, .add-notes input, .btn-submit button {
+    font-family: 'IBM Plex Mono', monospace;
+}
+h1 {
+    font-family: 'Comfortaa', cursive;
+}
+#notes {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+header {
+    display: flex;
+    align-items: center;
+}
+main {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.search-notes input  {
+    width: -webkit-fill-available;
+    height: 2rem;
+    border: var(--border-gray);
+    border-radius: 5px;
+    padding-left: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-notes {
+    width: min(500px, 90%);
+    margin-inline:auto; 
+}
+
+.add-notes{
+    border: var(--border-gray);
+    width: min(800px, 90%);
+    margin-top: 2rem;
+    margin-inline: auto;
+    border-radius: 5px;
+    color:white
+}
+.add-notes, .add-notes input, .add-notes textarea, .add-notes button, .add-notes ::placeholder {
+    color: white;
+}
+.add-notes input:focus, .add-notes textarea:focus, .search-notes input:focus {
+    outline: none;
+}
+.add-notes input {
+    height: 2rem;
+    
+}
+.add-notes textarea, .add-notes input {
+    width: -webkit-fill-available;
+    border: none;
+    font-size: 16px;
+    padding-left: 1rem;
+    font-weight:bold;
+    margin-top: 1rem;
+}
+.btn-logo img {
+    width: 2rem;
+    display: flex;
+}
+.btn-logo {
+    display: flex;
+    justify-content: space-between;
+    width: 12%;
+}
+.button-area {
+    display: flex;
+    align-items: center;
+    margin-inline: 1rem;
+    padding-bottom: 1rem;
+    width:-webkit-fill-available;
+    justify-content: space-between;
+}
+.btn-submit {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2rem;
+}
+.btn-submit button {
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+.btn-submit button:hover {
+    cursor: pointer;
+}
+.note-item {
+    border-radius: 10px;
+    padding-inline: 1rem;
+    border: var(--border-black);
+    padding-bottom: 1rem;
+    color: white;
+    box-shadow: 0.4rem 0.4rem 0 #222;
+}
+.note-items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    /* margin-top: 2rem; */
+}
+.btn-note-icon img {
+    width: 1.5rem;
+}
+.btn-note-icon {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+ .note-color:hover, .note-archive:hover, .note-delete:hover {
+    padding: 2px;
+    background-color: rgba(214, 211, 211, 0.3);
+    border-radius: 100%;
+}
+
+@media (max-width: 500px) {
+    header {
+        display: block;
+    }
+    .note-items {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    .button-area {
+        display: block;
+    }
+}
+@media (min-width: 500px) and (max-width:1000px) {
+    .note-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
