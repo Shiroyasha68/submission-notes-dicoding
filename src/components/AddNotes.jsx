@@ -50,6 +50,7 @@ const AddNotes = ({addNotes}) => {
     }
     return (
         <div className="add-notes" style={myStyle}>
+                <div className="rounded">{charValue()}</div>
                 <input type="text" name="" className="input-title" placeholder="Judul" onChange={addTitleFun} value={addTitle} style={myStyle}/><br />
                 {requiredTitle ? 
                 <p>Judul harus diisi</p>

@@ -68,6 +68,10 @@ main {
     width: fit-content;
     margin-left: 1rem;
 }
+.add-notes .rounded {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
 .add-notes textarea, .add-notes input {
     width: -webkit-fill-available;
     border: none;
