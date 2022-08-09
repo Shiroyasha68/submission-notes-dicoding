@@ -14,8 +14,10 @@ const App = () => {
   }
   const onDelete = (id) => {
     const notes= getData.filter(item => item.id !== id);
+    if(window.confirm("apakah anda yakin ingin menghapus catatan ini?")) {
       setGetData(notes);
       setSearchParams(notes);
+    }
   }
   const onArchive = (id) => {
     const [changeArchive] = getData.filter(item => item.id == id);
