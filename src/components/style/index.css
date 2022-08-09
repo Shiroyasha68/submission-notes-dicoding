@@ -61,6 +61,13 @@ main {
     height: 2rem;
     
 }
+.add-notes p {
+    color: red;
+    font-weight: 700;
+    background-color: white;
+    width: fit-content;
+    margin-left: 1rem;
+}
 .add-notes textarea, .add-notes input {
     width: -webkit-fill-available;
     border: none;
