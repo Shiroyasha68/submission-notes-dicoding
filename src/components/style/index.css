@@ -71,6 +71,27 @@ main {
     margin-left: 1rem;
     margin-top: 1rem;
 }
+
+.rounded {
+    padding-top: 1rem;
+    padding-right: 2rem;
+    text-align: end;
+}
+.color-picker * {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+    border-radius: 100%;
+}
+.color-picker {
+    position: absolute;
+    display: flex;
+    bottom: 1rem;
+    left: 2.5rem;
+}
+.add-notes {
+    position: relative;
+}
 .add-notes textarea, .add-notes input {
     width: -webkit-fill-available;
     border: none;
@@ -87,6 +108,7 @@ main {
     display: flex;
     justify-content: space-between;
     width: 12%;
+    
 }
 .button-area {
     display: flex;
@@ -151,5 +173,14 @@ main {
 @media (min-width: 500px) and (max-width:1000px) {
     .note-items {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 600px) {
+    .color-picker {
+        bottom: 5rem;
+        margin-left: -1rem;
+    }
+    .color-picker * {
+        margin-left: 0.5rem;
     }
 }

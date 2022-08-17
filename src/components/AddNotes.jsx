@@ -55,7 +55,6 @@ const AddNotes = ({addNotes}) => {
                 {requiredTitle ? 
                 <p>Judul harus diisi</p>
                  : null}
-                
                 <textarea name="" id="" cols="30" rows="4" placeholder="Catatan" onChange={addbodyFun} value={addBody} style={myStyle} />
                 <div className="button-area">
                     <div className="btn-logo">
