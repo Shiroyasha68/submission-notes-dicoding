@@ -5,7 +5,7 @@ const AddNotes = ({addNotes}) => {
     const [addTitle, setAddTitle] = useState('');
     const [addBody, setAddbody] = useState('');
     const [charLimit, setCharLimit] = useState(0);
-    const [colorPicker, setColorPicker] = useState('f77f00');
+    const [colorPicker, setColorPicker] = useState('277BC0');
     const [requiredTitle, setRequiredTitle] = useState(false)
     const addTitleFun = (e) => {
         setAddTitle(event.target.value.slice(0, 50));

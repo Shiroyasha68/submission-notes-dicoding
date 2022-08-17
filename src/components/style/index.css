@@ -7,13 +7,13 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Comfortaa', cursive;
 }
 .search-notes input, .add-notes textarea, .add-notes input, .btn-submit button {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Comfortaa', cursive;
 }
 h1 {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'IBM Plex Mono', monospace;
 }
 #notes {
     margin-left: 2rem;
@@ -44,7 +44,6 @@ main {
 }
 
 .add-notes{
-    border: var(--border-gray);
     width: min(800px, 90%);
     margin-top: 2rem;
     margin-inline: auto;
@@ -112,12 +111,10 @@ main {
     cursor: pointer;
 }
 .note-item {
-    border-radius: 10px;
     padding-inline: 1rem;
-    border: var(--border-black);
-    padding-bottom: 1rem;
+    padding-bottom: 3rem;
     color: white;
-    box-shadow: 0.4rem 0.4rem 0 #222;
+    position: relative;
 }
 .note-items {
     display: grid;
@@ -131,6 +128,8 @@ main {
     display: flex;
     justify-content: space-between;
     width: 30%;
+    position: absolute;
+    bottom: 1rem;
 }
  .note-color:hover, .note-archive:hover, .note-delete:hover {
     padding: 2px;

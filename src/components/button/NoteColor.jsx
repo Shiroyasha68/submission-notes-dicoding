@@ -7,7 +7,7 @@ const NoteColor = ({addColorFun}) => {
     }
     return (
         <>
-            <img src="./images/color.svg"  alt="" className="note-color" onClick={randomColorPicker}/>
+            <img src="./images/ic_sharp-color-lens.svg"  alt="" className="note-color" onClick={randomColorPicker}/>
         </>
     )
 }

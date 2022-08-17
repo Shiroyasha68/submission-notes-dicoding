@@ -1,7 +1,7 @@
 const Archive = ({id, onArchive}) => {
     return (
         <>
-        <img src="./images/archive.svg" alt="" className="note-archive" onClick={() => onArchive(id)}/>
+        <img src="./images/bx_archive-out.svg" alt="" className="note-archive" onClick={() => onArchive(id)}/>
         </>
     )
 }
