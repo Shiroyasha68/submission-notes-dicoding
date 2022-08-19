@@ -58,6 +58,7 @@ main {
 }
 .add-notes input {
     height: 2rem;
+    padding-top: 2rem;
     
 }
 .add-notes p {
@@ -73,9 +74,13 @@ main {
 }
 
 .rounded {
-    padding-top: 1rem;
-    padding-right: 2rem;
-    text-align: end;
+    position: absolute;
+    text-align: center;
+    line-height: 2rem;
+    right: 1rem;
+    border-radius: 100%;
+    width:2rem;
+    height: 2rem;
 }
 .color-picker * {
     width: 1.5rem;

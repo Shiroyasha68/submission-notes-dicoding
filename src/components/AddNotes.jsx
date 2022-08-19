@@ -5,7 +5,7 @@ const AddNotes = ({addNotes}) => {
     const [addTitle, setAddTitle] = useState('');
     const [addBody, setAddbody] = useState('');
     const [charLimit, setCharLimit] = useState(0);
-    const [colorPicker, setColorPicker] = useState('277BC0');
+    const [colorPicker, setColorPicker] = useState('FFB200');
     const [requiredTitle, setRequiredTitle] = useState(false)
     const addTitleFun = (e) => {
         setAddTitle(event.target.value.slice(0, 50));
@@ -13,7 +13,7 @@ const AddNotes = ({addNotes}) => {
     }
     const charValue = () => {
         if(charLimit > 50) {
-            return 'Karakter maksimal 50';
+            return '50';
         }
         else {
             return charLimit;
@@ -48,9 +48,26 @@ const AddNotes = ({addNotes}) => {
             setRequiredTitle(true)
         }
     }
+        const borderStyle = () => {
+            if (charLimit >= 50) {
+                return {
+                    border: 'solid 3px red'
+                }
+            }
+            else if (charLimit >= 40 ) {
+                return {
+                    border: 'solid 3px yellow'
+                }
+            }
+            else {
+                return {
+                    border: ' solid 3px green'
+                }
+            }
+        }       
     return (
         <div className="add-notes" style={myStyle}>
-                <div className="rounded">{charValue()}</div>
+                <div className="rounded" style={borderStyle()}>{charValue()}</div>
                 <input type="text" name="" className="input-title" placeholder="Judul" onChange={addTitleFun} value={addTitle} style={myStyle}/><br />
                 {requiredTitle ? 
                 <p>Judul harus diisi</p>
