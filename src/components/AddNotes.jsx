@@ -64,7 +64,7 @@ const AddNotes = ({addNotes}) => {
                     border: ' solid 3px green'
                 }
             }
-        }       
+        }
     return (
         <div className="add-notes" style={myStyle}>
                 <div className="rounded" style={borderStyle()}>{charValue()}</div>
