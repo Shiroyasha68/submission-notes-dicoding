@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 const NoteColor = ({addColorFun}) => {
     const [isOpen, setIsOpen] = useState(false);
     const  variants = {
-        open: {visibility: "visible", width:"100%", transition: { staggerChildren:0.2, duration: 0.8, type: 'tween'}},
+        open: {visibility: "visible", width:"100%", transition: { staggerChildren:1, duration:1, type: 'easein'}},
         close: {visibility: "hidden"}
     }
     const item = {

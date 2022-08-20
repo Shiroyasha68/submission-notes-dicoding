@@ -92,8 +92,8 @@ main {
 .color-picker {
     position: absolute;
     display: flex;
-    bottom: 1rem;
-    left: 2.5rem;
+    bottom: 1.5rem;
+    left: 4rem;
 }
 .add-notes {
     position: relative;
@@ -154,15 +154,22 @@ main {
 }
 .btn-note-icon {
     display: flex;
+    
     justify-content: space-between;
     width: 30%;
     position: absolute;
     bottom: 1rem;
 }
- .note-color:hover, .note-archive:hover, .note-delete:hover {
-    padding: 2px;
+ .note-archive:hover, .note-delete:hover {
     background-color: rgba(214, 211, 211, 0.3);
     border-radius: 100%;
+}
+.note-color:hover {
+    background-color:  rgba(214, 211, 211, 0.3);
+    border-radius: 50%;
+}
+.note-color, .note-archive, .note-delete {
+    padding: 6px;
 }
 
 @media (max-width: 500px) {
@@ -183,7 +190,8 @@ main {
 }
 @media (max-width: 600px) {
     .color-picker {
-        bottom: 5rem;
+        bottom: 3rem;
+        left: 4.5rem;
         margin-left: -1rem;
     }
     .color-picker * {
