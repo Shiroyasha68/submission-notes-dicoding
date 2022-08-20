@@ -24,8 +24,9 @@ header {
     align-items: center;
 }
 main {
-    width: 90%;
+    width: 100%;
     margin-inline: auto;
+    margin-left: -1rem;
 }
 
 .search-notes input  {

@@ -1,38 +1,28 @@
 import {colorNotes} from '../../index.js';
 import {useState} from 'react';
+import {motion} from 'framer-motion';
+
 const NoteColor = ({addColorFun}) => {
-    const [colorVal, setColorVal] = useState(false);
-    const visibility = () => {
-        if (colorVal) {
-            return {
-                opacity: 1
-            }
-        }
-        else {
-            return {
-                opacity: 0
-            }
-        }
+    const [isOpen, setIsOpen] = useState(false);
+    const  variants = {
+        open: {visibility: "visible", width:"100%", transition: { staggerChildren:0.2, duration: 0.8, type: 'tween'}},
+        close: {visibility: "hidden"}
     }
-    const pickColorBtn = () => {
-        if (colorVal == false) {
-            setColorVal(true)
-        }
-        else {
-            setColorVal(false)
-        }
+    const item = {
+        open: {opacity: 1},
+        close: {opacity: 0}
     }
     return (
         <>
-            <div className="color-picker" style={visibility()}>
-                <div style={{backgroundColor: '#277BC0'}} onClick={() => addColorFun('277BC0')} ></div>
-                <div  style={{backgroundColor: '#FFB200'}} onClick={()=> addColorFun('FFB200')}></div>
-                <div style={{backgroundColor: '#C21010'}} onClick={()=> addColorFun('C21010')}></div>
-                <div  style={{backgroundColor: '#FA2FB5'}} onClick={()=> addColorFun('FA2FB5')}></div>
-                <div  style={{backgroundColor: '#5BB318'}} onClick={()=> addColorFun('5BB318')}></div>
-                <div style={{backgroundColor: '#61481C'}} onClick={()=> addColorFun('61481C')}></div>
-            </div>
-            <img src="./images/ic_sharp-color-lens.svg"  alt="" className="note-color" onClick={pickColorBtn}/>
+            <motion.div className="color-picker" variants={variants} animate={isOpen? "open" : "close"} initial={{width: 0}}>
+                <motion.div style={{backgroundColor: '#277BC0'}} onClick={() => addColorFun('277BC0')}  ></motion.div>
+                <motion.div  style={{backgroundColor: '#FFB200'}} onClick={()=> addColorFun('FFB200')} ></motion.div>
+                <motion.div style={{backgroundColor: '#C21010'}} onClick={()=> addColorFun('C21010')} ></motion.div>
+                <motion.div  style={{backgroundColor: '#FA2FB5'}} onClick={()=> addColorFun('FA2FB5')} ></motion.div>
+                <motion.div  style={{backgroundColor: '#5BB318'}} onClick={()=> addColorFun('5BB318')} ></motion.div>
+                <motion.div style={{backgroundColor: '#61481C'}} onClick={()=> addColorFun('61481C')}></motion.div>
+            </motion.div>
+            <img src="./images/ic_sharp-color-lens.svg"  alt="" className="note-color" onClick={() => setIsOpen(isOpen => !isOpen)}/>
         </>
     )
 }
